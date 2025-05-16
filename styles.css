@@ -1,0 +1,17 @@
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 320px;   /* 16 squares × 20px each, plus borders */
+    height: 320px;
+}
+.square {
+    width: 20px;          
+    height: 20px;
+    border: 1px solid #000;
+    background-color: aquamarine;
+    box-sizing: border-box;
+    
+}
+.square:hover{
+    background-color:beige;
+}

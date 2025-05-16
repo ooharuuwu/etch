@@ -31,7 +31,19 @@ btn.addEventListener("click", ()=>{
                 const content = document.createElement("div")
                 content.classList.add("square")
                 content.style.width = squareSize + "px";
-                content.style.height = squareSize + "px";        
+                content.style.height = squareSize + "px";
+                
+                content.addEventListener("mouseenter", ()=>{
+                    const r = Math.floor(Math.random() * 256)
+                    const g = Math.floor(Math.random() * 256)
+                    const b = Math.floor(Math.random() * 256)
+                    content.style.backgroundColor = `rgb(${r}, ${g}, ${b})`
+                });    
+                
+                content.addEventListener("mouseleave", () => {
+                    content.style.backgroundColor = ""; 
+                });
+                
                 container.appendChild(content)
             }
         }
